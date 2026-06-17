@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Placement Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-body">
+
+    <!-- Animated background blobs -->
+    <div class="login-bg-blob blob1"></div>
+    <div class="login-bg-blob blob2"></div>
+    <div class="login-bg-blob blob3"></div>
+
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <div class="logo-circle">PMS</div>
+                <h1>Placement Management System</h1>
+                <p>Sign in to continue</p>
+            </div>
+
+            <form id="loginForm" class="login-form" autocomplete="on">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <div class="input-wrap">
+                        <span class="input-icon">👤</span>
+                        <input type="text" id="username" name="username" placeholder="Enter your username" required autocomplete="username">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-wrap">
+                        <span class="input-icon">🔒</span>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required autocomplete="current-password">
+                        <button type="button" class="toggle-password" id="togglePassword" aria-label="Show password">Show</button>
+                    </div>
+                    <div class="caps-lock-warning" id="capsWarning">⚠ Caps Lock is on</div>
+                </div>
+
+                <div id="errorMsg" class="error-message"></div>
+
+                <button type="submit" class="btn btn-primary btn-block" id="loginBtn">Login</button>
+            </form>
+
+            <div class="security-note">
+                <span class="lock-icon">🔐</span>
+                <span>Your credentials are encrypted and never stored in plain text.</span>
+            </div>
+
+            <!-- <div class="login-hint">
+                <p><strong>Demo Credentials</strong></p>
+                <table class="hint-table">
+                    <tr><td>Admin</td><td>admin / admin123</td></tr>
+                    <tr><td>Coordinator (CSE)</td><td>coordinator_cse / coord123</td></tr>
+                    <tr><td>Student (Read-only)</td><td>student / student123</td></tr>
+                </table>
+            </div> -->
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Placement Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <div class="logo-circle">PMS</div>
+            <span>Placement Management System</span>
+        </div>
+        <div class="navbar-right">
+            <div class="user-info">
+                <div class="user-name" id="navUserName">-</div>
+                <div class="user-role"><span class="role-badge" id="navUserRole">-</span></div>
+            </div>
+            <button class="btn btn-secondary btn-sm" onclick="Auth.logout()">Logout</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="page-title">Placement Dashboard</h1>
+        <p class="page-subtitle" id="welcomeMsg">Overall placement statistics across all departments</p>
+
+        <div id="summaryGrid" class="summary-grid">
+            <div class="loading">Loading statistics...</div>
+        </div>
+
+        <h2 class="section-heading">Placed vs Not Placed by Department</h2>
+        <div class="chart-card">
+            <div id="barChart" class="bar-chart"></div>
+            <div class="legend">
+                <div class="legend-item"><span class="legend-dot placed"></span> Placed</div>
+                <div class="legend-item"><span class="legend-dot notplaced"></span> Not Placed</div>
+            </div>
+        </div>
+
+        <h2 class="section-heading">Departments</h2>
+        <p class="page-subtitle">Click on a department to view detailed student placement records</p>
+        <div id="deptGrid" class="dept-grid">
+            <div class="loading">Loading departments...</div>
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
